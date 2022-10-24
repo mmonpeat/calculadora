@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+</head>
+<body>
+    <ul>
+        <li><button name="num" value="1">1</button></li>
+        <li><button name="num" value="2">2</button></li>
+        <li><button name="num" value="3">3</button></li>
+        <li><button name="num" value="4">4</button></li>
+        <li><button name="num" value="5">5</button></li>
+        <li><button name="num" value="6">6</button></li>
+        <li><button name="num" value="7">7</button></li>
+        <li><button name="num" value="8">8</button></li>
+        <li><button name="num" value="9">9</button></li>
+        <li><button name="num" value="0">0</button></li>
+        <li><button name="oper" value="sum">+</button></li>
+        <li><button name="oper" value="rest">-</button></li>
+        <li><button name="oper" value="mult">*</button></li>
+        <li><button name="oper" value="div">/</button></li>
+        <li><button id="reset" value="reset">C</button></li>
+        <li><button id="result" value="result">=</button></li>
+    </ul>
+    <div id="screen">0</div>
+    <!-- {element}.innerHTML = '...' -->
+</body>
+<style>
+body {
+    background-color: lavender;
+}
+
+ul {
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    grid-template-columns: repeat(4, 100px);/* 1fr */
+    /* grid-template-rows: minmax(120px, auto) repeat(5, 100px); */
+    grid-template-areas: 
+    "num1 num2 num3 sum"
+    "num4 num5 num6 rest"
+    "num7 num8 num9 mult"
+    "num0 . . div";
+    width: 400px;
+}
+ul li button {
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid lightblue;
+    border-radius: 100px;
+}
+div#screen {
+    display: block;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 400px;
+    padding: 1rem;
+    border: 3px solid lightskyblue;
+    border-radius: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 3rem;
+    text-align: center;
+}
+ul li:nth-child(1) {
+    grid-area: num1;
+}
+ul li:nth-child(2) {
+    grid-area: num2;
+}
+ul li:nth-child(3) {
+    grid-area: num3;
+}
+ul li:nth-child(4) {
+    grid-area: num4;
+}
+ul li:nth-child(5) {
+    grid-area: num5;
+}
+ul li:nth-child(5) {
+    grid-area: num5;
+}
+ul li:nth-child(6) {
+    grid-area: num6;
+}
+ul li:nth-child(7) {
+    grid-area: num7;
+}
+ul li:nth-child(8) {
+    grid-area: num8;
+}
+ul li:nth-child(9) {
+    grid-area: num9;
+}
+ul li:nth-child(10) {
+    grid-area: num0;
+}
+ul li:nth-child(11) {
+    grid-area: sum;
+}
+ul li:nth-child(12) {
+    grid-area: rest;
+}
+ul li:nth-child(13) {
+    grid-area: mult;
+}
+ul li:nth-child(14) {
+    grid-area: div;
+}
+</style>
+<script src="calculadora.js"></script>
+</html>
